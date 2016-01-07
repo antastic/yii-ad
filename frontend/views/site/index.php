@@ -1,7 +1,21 @@
 <?php
-
+use yii\helpers\Html;
+use yii\helpers\Url;
 /* @var $this yii\web\View */
 
 $this->title = 'ระบบจัดการแฟต รพ.สารภี';
 ?>
-
+<?php
+    $route1=Yii::$app->urlManager->createUrl('test/test1');
+?>
+<a href="<?=$route1?>">ไปที test1</a>
+<br>
+<?php
+    $route2=Yii::$app->urlManager->createUrl(['test/test2','name'=>'อมรเทพ','lname'=>"สุวรรณคำ"]);
+?>
+<a href="<?=$route2?>">ไปที test2</a>
+<br>
+<?=
+        Html::a('ลิงค์แบบที3',['test/test1']);
+        ?>
+<br>
